@@ -10,9 +10,9 @@
  */
 'use strict';
 
-var declare = require('@babel/helper-plugin-utils').declare;
-var empowerAssertPlugin = require('babel-plugin-empower-assert');
-var espowerPlugin = require('babel-plugin-espower');
+var declare = require('@gerhobbelt/babel-helper-plugin-utils').declare;
+var empowerAssertPlugin = require('@gerhobbelt/babel-plugin-empower-assert');
+var espowerPlugin = require('@gerhobbelt/babel-plugin-espower');
 
 module.exports = declare(function (api, options, dirname) {
     api.assertVersion(7);

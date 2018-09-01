@@ -2,7 +2,7 @@ var _powerAssertVisitorKeys = "{\"ArrayExpression\":[\"elements\"],\"AssignmentE
     _powerAssertRecorder = function () { function PowerAssertRecorder() { this.captured = []; } PowerAssertRecorder.prototype._capt = function _capt(value, espath) { this.captured.push({ value: value, espath: espath }); return value; }; PowerAssertRecorder.prototype._expr = function _expr(value, source) { var capturedValues = this.captured; this.captured = []; return { powerAssertContext: { value: value, events: capturedValues }, source: source }; }; return PowerAssertRecorder; }();
 
 import React from 'react';
-import assert from "power-assert";
+import assert from "@gerhobbelt/power-assert";
 import { shallow, mount } from 'enzyme';
 import * as sinon from 'sinon';
 import Foo from '../src/Foo';
